@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func Run_Day01b() {
+func RunDay01b() {
 	fileHandle, _ := os.Open("./Day01/input_ja.txt")
 	defer fileHandle.Close()
 
@@ -45,5 +45,5 @@ func Run_Day01b() {
 		total += j
 	}
 
-	fmt.Printf("Day 1b answer: %d", total)
+	fmt.Printf("Day 1b answer: %d\n", total)
 }

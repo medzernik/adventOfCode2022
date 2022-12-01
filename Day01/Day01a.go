@@ -7,8 +7,7 @@ import (
 	"strconv"
 )
 
-func Run_Day01a() {
-
+func RunDay01a() {
 	fileHandle, _ := os.Open("./Day01/input_ja.txt")
 	defer fileHandle.Close()
 
