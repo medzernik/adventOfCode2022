@@ -46,4 +46,5 @@ func RunDay01b() {
 	}
 
 	fmt.Printf("Day 1b answer: %d\n", total)
+
 }
