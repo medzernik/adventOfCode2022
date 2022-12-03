@@ -39,13 +39,11 @@ func RunDay03a() {
 		for i := range rightPart {
 			if strings.Contains(string(rightPart), string(leftPart[i])) {
 				item := rune(leftPart[i])
-				fmt.Println("gay", item)
-				if unicode.IsLower(rune(item)) {
+
+				if unicode.IsLower(item) {
 					prioritiesSum += int(item) - 96
-					//fmt.Println(int(item) - 10805)
-				} else if unicode.IsUpper(rune(item)) {
+				} else if unicode.IsUpper(item) {
 					prioritiesSum += int(item) - 38
-					//fmt.Println(int(item) - 38)
 				}
 				break
 			}
