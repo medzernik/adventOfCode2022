@@ -1,8 +1,6 @@
 package main
 
-import (
-	"adventOfCode2022/Day03"
-)
+import "adventOfCode2022/Day03"
 
 func main() {
 	//Day01.RunDay01a()
@@ -11,6 +9,6 @@ func main() {
 	//Day02.RunDay02a()
 	//Day02.RunDay02b()
 
-	Day03.RunDay03a()
-	//Day03.RunDay03b()
+	//Day03.RunDay03a()
+	Day03.RunDay03b()
 }
