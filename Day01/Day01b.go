@@ -45,6 +45,6 @@ func RunDay01b() {
 		total += j
 	}
 
-	fmt.Printf("Day 01b answer: \t%d\n", total)
+	fmt.Printf("Day 01b result is: \t%d\n", total)
 
 }
