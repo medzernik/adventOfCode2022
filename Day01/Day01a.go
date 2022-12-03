@@ -35,5 +35,5 @@ func RunDay01a() {
 		}
 	}
 
-	fmt.Printf("Day 1a answer: %d\n", maximum)
+	fmt.Printf("Day 01a answer: \t%d\n", maximum)
 }

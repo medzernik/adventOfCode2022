@@ -56,5 +56,5 @@ func RunDay03b() {
 
 	}
 
-	fmt.Println(prioritiesSum)
+	fmt.Printf("Day 03b result is: \t%d\n", prioritiesSum)
 }

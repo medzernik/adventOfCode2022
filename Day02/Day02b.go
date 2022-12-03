@@ -14,7 +14,6 @@ func RunDay02b() {
 		log.Fatal(err)
 	}
 
-
 	var lineArrays []string
 
 	defer f.Close()
@@ -70,6 +69,6 @@ func RunDay02b() {
 		}
 
 	}
-	fmt.Printf("Day 02b result is: %d\n", score)
+	fmt.Printf("Day 02b result is: \t%d\n", score)
 
 }
