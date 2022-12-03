@@ -36,14 +36,13 @@ func RunDay03b() {
 		scanner.Scan()
 		thirdSet := scanner.Text()
 
-		fmt.Println(firstSet)
-		fmt.Println(secondSet)
-		fmt.Println(thirdSet)
+		//fmt.Println(firstSet)
+		//fmt.Println(secondSet)
+		//fmt.Println(thirdSet)
 
 		for i := range firstSet {
 			if strings.Contains(secondSet, string(firstSet[i])) && strings.Contains(thirdSet, string(firstSet[i])) {
 				item := rune(firstSet[i])
-				fmt.Println(string(item))
 
 				if unicode.IsLower(item) {
 					prioritiesSum += int(item) - 96

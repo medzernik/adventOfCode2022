@@ -32,9 +32,9 @@ func RunDay03a() {
 
 		leftPart := j[:len(j)/2]
 		rightPart := j[len(j)/2:]
-		fmt.Println(j)
-		fmt.Println(leftPart)
-		fmt.Println(rightPart)
+		//fmt.Println(j)
+		//fmt.Println(leftPart)
+		//fmt.Println(rightPart)
 
 		for i := range rightPart {
 			if strings.Contains(string(rightPart), string(leftPart[i])) {
@@ -48,24 +48,7 @@ func RunDay03a() {
 				break
 			}
 		}
-
-		//splitPart := strings.Split(lineArray[i], "")
-		//
-		//rightPart := splitPart[len(splitPart)/2:]
-		//leftPart := splitPart[:len(splitPart)/2]
-		//fmt.Print(leftPart)
-		//fmt.Print(" | ")
-		//fmt.Print(rightPart)
-		//fmt.Println()
-
-		//fmt.Println(test)
 	}
 
-	fmt.Println(prioritiesSum)
-
-	fmt.Println("INTEGERS FOLLOW")
-	fmt.Println(int('a') - 96)
-	fmt.Println(int('z') - 96)
-	fmt.Println(int('A') - 38)
-	fmt.Println(int('Z') - 38)
+	fmt.Printf("Day 03a result is: \t%d\n", prioritiesSum)
 }
