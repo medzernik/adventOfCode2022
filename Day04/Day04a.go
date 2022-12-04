@@ -2,6 +2,7 @@ package Day04
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
 )
@@ -19,6 +20,27 @@ func RunDay04a() {
 	scanner := bufio.NewScanner(f)
 
 	for scanner.Scan() {
-		lineArray = append(lineArray, scanner.Text())
+		assignment := strings.Split(scanner.Text(), ",")
+
+		for i, j := range strings.Split(assignment[0], "-") {
+			if i == 0 {
+				ll, _ = strconv.Atoi(j)
+			} else {
+				lr, _ = strconv.Atoi(j)
+			}
+		}
+
+		for i, j := range strings.Split(assignment[1], "-") {
+			if i == 0 {
+				rl, _ = strconv.Atoi(j)
+			} else {
+				rr, _ = strconv.Atoi(j)
+			}
+		}
+
+		if (rl >= ll && rr <= lr) || (ll >= rl && lr <= rr) {
+			count++
+		}
+
 	}
 }
