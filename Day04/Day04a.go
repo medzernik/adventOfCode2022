@@ -5,19 +5,22 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func RunDay04a() {
-	f, err := os.Open("./Day04/input_ja.txt")
+	f, err := os.Open("./Day04/input_filip.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	var lineArray []string
-
 	defer f.Close()
 
 	scanner := bufio.NewScanner(f)
+
+	var ll, lr, rl, rr int
+	var count int
 
 	for scanner.Scan() {
 		assignment := strings.Split(scanner.Text(), ",")
@@ -43,4 +46,5 @@ func RunDay04a() {
 		}
 
 	}
+	fmt.Printf("Day 04a result is: \t%d\n", count)
 }
