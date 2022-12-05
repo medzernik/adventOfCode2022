@@ -8,7 +8,7 @@ import (
 )
 
 func RunDay05a() {
-	f, err := os.Open("./Day05/input_ja.txt")
+	f, err := os.Open("./Day05/input_filipino.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -28,6 +28,7 @@ func RunDay05a() {
 				stacks[(i-1)/4] = append([]rune{sym}, stacks[(i-1)/4]...)
 			}
 		}
+		fmt.Println(stacks)
 		scanner.Scan()
 	}
 
@@ -39,14 +40,19 @@ func RunDay05a() {
 
 		//move to box
 		for i := 0; i < amount; i++ {
-
-			stacks[to-1] = append(stacks[to-1], stacks[from-1][len(stacks[from-1])-1])
-			fmt.Println(stacks[from-1][len(stacks[from-1])-1])
+			//there should be proper stack implementation methods here
+			ti, fi, l := to-1, from-1, len(stacks[from-1])   //"ti" and "fi" stand for "to index" and "from index"
+			stacks[ti] = append(stacks[ti], stacks[fi][l-1]) //adds last item from "from" stack to "to" stack
+			stacks[fi] = stacks[fi][:l-1]                    //removes last item from "from" stack
+			//fmt.Println(stacks[fi])
 		}
 
 		fmt.Println(amount, from, to)
+
 	}
 
-	//fmt.Printf("%c", stacks)
+	for _, box := range stacks {
+		fmt.Print(string(box[len(box)-1])) //prints last of each stack
+	}
 
 }

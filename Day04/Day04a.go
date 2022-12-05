@@ -10,7 +10,7 @@ import (
 )
 
 func RunDay04a() {
-	f, err := os.Open("./Day04/input_filip.txt")
+	f, err := os.Open("./Day04/input_ja.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
