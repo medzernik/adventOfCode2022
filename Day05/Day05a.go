@@ -17,12 +17,9 @@ func RunDay05a() {
 
 	scanner := bufio.NewScanner(f)
 
-	//var stacks [9][9]int
-	//var stacks [][]rune
-
 	stacks := make([][]rune, 9)
 
-	for scanner.Text() != " 1   2   3   4   5   6   7   8   9 " {
+	for scanner.Text() != " 1   2   3   4   5   6   7   8   9" { //there should be an extra space after 9, but you can try what happens if you add it yourself :))))
 		for i, sym := range scanner.Text() {
 			if sym != ' ' && sym != '[' && sym != ']' {
 				stacks[(i-1)/4] = append([]rune{sym}, stacks[(i-1)/4]...)
