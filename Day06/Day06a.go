@@ -2,6 +2,7 @@ package Day06
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
 )
@@ -11,8 +12,6 @@ func RunDay06a() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	var lineArray []string
 
 	defer f.Close()
 
