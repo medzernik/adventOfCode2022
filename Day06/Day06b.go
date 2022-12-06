@@ -1,5 +1,5 @@
 package Day06
 
-func main() {
+func RunDay06b() {
 
 }
